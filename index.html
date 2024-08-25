@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Mídias</title>
+</head>
+
+<body>
+
+    <!-- Titulo -->
+    <h1>Reproduzindo audio</h1>
+
+    <h2>Forma simples</h2>
+    <!-- Não e compatível com alguns navegadores. -->
+    <audio src="audio/bunp.mp3" autoplay controls></audio>
+    <h2>Forma completa</h2>
+    <!-- Mais compatível com navegadores. -->
+    <audio preload="metadata" controls autoplay loop>
+
+        <source src="audio/bunp.mp3" type="audio/mepg">
+        <!-- Exemplo -->
+        <source src="audio/bunp.ogg" type="audio/ogg">
+        <!-- Exemplo -->
+        <!-- Tentar evitar aquivo WAV por ser muito pesado. -->
+        <source src="audio/bunp.wav" type="audio/wav">
+
+        <p>Infelizmente seu navegador nao consegue reproduzir audios clique no link para abaixar o MP3: <a
+                href="audio/bunp.mp3">Audio MP3</a>
+        </p>
+
+    </audio>
+
+    <h2>Inserir videos hospedados localmente</h2>
+
+    <h3>Forma simples</h3>
+    <!-- Não e compatível com alguns navegadores. -->
+    <video src="video/meu-video.mp4" controls loop width="560"></video>
+
+    <h3>Forma completa</h3>
+    <!-- Mais compatível com navegadores porem muito cara em hospedagem -->
+    <video controls loop width="560" poster="img/pexels-luis-gomes-166706-546819.jpg">
+
+        <source src="video/meu-video.webm" type="video/webm">
+        <source src="video/meu-video.ogv" type="video/ogg">
+        <source src="video/meu-video.m4v" type="video/mp4">
+        <source src="video/meu-video.mp4" type="video/mp4">
+        <p>Infelizmente seu navegador nao consegue reproduzir videos clique no link para abaixar o MP4:
+            <a href="video/meu-video.mp4">Video MP4</a>
+        </p>
+
+    </video>
+
+    <h2>Inserir videos hospedados em outros sites</h2>
+
+    <!-- YouTube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y?si=Y6k2dTVBA4wVawj9"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+
+</html>
